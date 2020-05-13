@@ -242,7 +242,7 @@ enum Group {
 'use strict';
 
 const antpb = require('antpb');
-const protocol = require('sofa-bolt-node');
+const protocol = require('dubbo-serialization-node');
 const { RpcServer } = require('dubbo-rpc-node').server;
 const { ZookeeperRegistry } = require('dubbo-rpc-node').registry;
 const logger = console;
@@ -287,7 +287,7 @@ server.start()
 'use strict';
 
 const antpb = require('antpb');
-const protocol = require('sofa-bolt-node');
+const protocol = require('dubbo-serialization-node');
 const { RpcClient } = require('dubbo-rpc-node').client;
 const { ZookeeperRegistry } = require('dubbo-rpc-node').registry;
 const logger = console;
