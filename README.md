@@ -1,5 +1,5 @@
-# sofa-rpc-node
-[SOFARPC](https://github.com/alipay/sofa-rpc) Nodejs 实现版本
+# dubbo-rpc-node
+[dubbo RPC](https://github.com/alipay/sofa-rpc) Nodejs 实现版本
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -48,12 +48,12 @@ SOFARPC Node 主要包含了四个子模块，分别是：
 #### 安装
 
 ```bash
-$ npm install sofa-rpc-node --save
+$ npm install dubbo-rpc-node --save
 ```
 
 #### 安装并启动 zookeeper
 
-sofa-rpc-node 默认的注册中心实现基于 zookeeper，所以需要先启动一个 zookeeper 实例
+dubbo-rpc-node 默认的注册中心实现基于 zookeeper，所以需要先启动一个 zookeeper 实例
 
 从 Homebrew 安装（macOs）
 
@@ -75,8 +75,8 @@ Starting zookeeper ... STARTED
 ```js
 'use strict';
 
-const { RpcServer } = require('sofa-rpc-node').server;
-const { ZookeeperRegistry } = require('sofa-rpc-node').registry;
+const { RpcServer } = require('dubbo-rpc-node').server;
+const { ZookeeperRegistry } = require('dubbo-rpc-node').registry;
 const logger = console;
 
 // 1. 创建 zk 注册中心客户端
@@ -112,8 +112,8 @@ server.start()
 ```js
 'use strict';
 
-const { RpcClient } = require('sofa-rpc-node').client;
-const { ZookeeperRegistry } = require('sofa-rpc-node').registry;
+const { RpcClient } = require('dubbo-rpc-node').client;
+const { ZookeeperRegistry } = require('dubbo-rpc-node').registry;
 const logger = console;
 
 // 1. 创建 zk 注册中心客户端
@@ -147,7 +147,7 @@ invoke().catch(console.error);
 ```js
 'use strict';
 
-const { RpcClient } = require('sofa-rpc-node').client;
+const { RpcClient } = require('dubbo-rpc-node').client;
 const logger = console;
 
 async function invoke() {
@@ -172,8 +172,8 @@ invoke().catch(console.error);
 ```js
 'use strict';
 
-const request = require('sofa-rpc-node').test;
-const { RpcServer } = require('sofa-rpc-node').server;
+const request = require('dubbo-rpc-node').test;
+const { RpcServer } = require('dubbo-rpc-node').server;
 const logger = console;
 
 describe('test/server.test.js', () => {
@@ -243,8 +243,8 @@ enum Group {
 
 const antpb = require('antpb');
 const protocol = require('sofa-bolt-node');
-const { RpcServer } = require('sofa-rpc-node').server;
-const { ZookeeperRegistry } = require('sofa-rpc-node').registry;
+const { RpcServer } = require('dubbo-rpc-node').server;
+const { ZookeeperRegistry } = require('dubbo-rpc-node').registry;
 const logger = console;
 
 // 传入 *.proto 文件存放的目录，加载接口定义
@@ -288,8 +288,8 @@ server.start()
 
 const antpb = require('antpb');
 const protocol = require('sofa-bolt-node');
-const { RpcClient } = require('sofa-rpc-node').client;
-const { ZookeeperRegistry } = require('sofa-rpc-node').registry;
+const { RpcClient } = require('dubbo-rpc-node').client;
+const { ZookeeperRegistry } = require('dubbo-rpc-node').registry;
 const logger = console;
 
 // 传入 *.proto 文件存放的目录，加载接口定义
