@@ -1,6 +1,6 @@
 {
   "name": "dubbo-rpc-node",
-  "version": "1.18.4",
+  "version": "1.18.5",
   "description": "dubbo RPC Nodejs Implementation",
   "main": "lib/index.js",
   "files": [
