@@ -1,6 +1,6 @@
 {
   "name": "dubbo-rpc-node",
-  "version": "1.18.8",
+  "version": "1.18.9",
   "description": "dubbo RPC Nodejs Implementation",
   "main": "lib/index.js",
   "files": [
@@ -47,7 +47,7 @@
     "sofa-bolt-node": "^1.1.1",
     "urlencode": "^1.1.0",
     "utility": "^1.16.1",
-    "zookeeper-cluster-client": "^3.1.0"
+    "zk-cluster-client": "^3.1.0"
   },
   "devDependencies": {
     "antpb": "^1.0.0",
