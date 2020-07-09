@@ -2,7 +2,7 @@
 
 const mm = require('mm');
 const assert = require('assert');
-const zookeeper = require('zookeeper-cluster-client');
+const zookeeper = require('zk-cluster-client');
 const { ACL, Permission, Id } = require('node-zookeeper-client');
 const ZookeeperRegistry = require('../../lib/registry/zk/data_client');
 
